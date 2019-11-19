@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./login.css";
 
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
@@ -14,10 +13,8 @@ import { red } from "@material-ui/core/colors";
 import IconButton from "@material-ui/core/IconButton";
 import Snackbar from "@material-ui/core/Snackbar";
 import SnackbarContent from "@material-ui/core/SnackbarContent";
-import logo from "../../images/logo.PNG";
-import logoMillorat from "../../images/logomillorat.PNG";
-import logoTransparent from "../../images/logoTransparent.PNG";
-import loadingGif from "../../images/loading.gif";
+import logo from "../../assets/logo-withoutname.png";
+import loadingGif from "../../assets/loading.gif";
 
 import api, { setUsername } from "../../api/axios";
 
@@ -55,7 +52,7 @@ const TextFieldStyled = withStyles(theme => ({
 
 const useStyles1 = makeStyles(theme => ({
   error: {
-    backgroundColor: red
+    backgroundColor: "#AD0000"
   },
   icon: {
     fontSize: 20
@@ -131,10 +128,9 @@ class Login extends Component {
         this.setState({ loading: false });
       })
       .catch(error => {
-        this.setState({ openError: true });
+        this.setState({ openError: true, loading: false });
         if (error.response) {
           console.log(error.response);
-          this.setState({ loading: false });
         }
       });
   }
@@ -152,10 +148,9 @@ class Login extends Component {
         this.setState({ loading: false });
       })
       .catch(error => {
-        this.setState({ openError: true });
+        this.setState({ openError: true, loading: false });
         if (error.response) {
           console.log(error.response);
-          this.setState({ loading: false });
         }
       });
   }
@@ -182,8 +177,6 @@ class Login extends Component {
         </Snackbar>
         <Grid container direction="column" justify="center" alignItems="center">
           <div style={{ textAlign: "center", marginTop: "6%" }}>
-            <img src={logoTransparent} alt={logo} />
-            <img src={logoMillorat} alt={logo} />
             <img src={logo} alt={logo} />
           </div>
           <Grid item xs={12}>
@@ -213,7 +206,7 @@ class Login extends Component {
             <img
               src={loadingGif}
               alt="spinner"
-              style={{ width: 300, marginBottom: -12 }}
+              style={{ width: 300 }}
             />
           ) : (
             <div>

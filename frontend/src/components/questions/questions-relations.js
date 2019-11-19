@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { withStyles } from "@material-ui/core";
 import Fab from "@material-ui/core/Fab";
-import letsgoGif from "../../images/start.gif";
-import continueGif from "../../images/continue.gif";
+import letsgoGif from "../../assets/start.gif";
+import continueGif from "../../assets/continue.gif";
 import NavigateNextRoundedIcon from "@material-ui/icons/NavigateNextRounded";
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 import Grid from "@material-ui/core/Grid";
@@ -544,7 +544,7 @@ class Relations extends Component {
               style={{
                 textAlign: "center",
                 fontSize: "40px",
-                marginBottom: 80,
+                marginBottom: 50,
                 marginTop: 40
               }}
             >
@@ -821,7 +821,7 @@ class Relations extends Component {
               style={{
                 textAlign: "center",
                 fontSize: "40px",
-                marginBottom: 80,
+                marginBottom: 50,
                 marginTop: 40
               }}
             >
@@ -898,7 +898,7 @@ class Relations extends Component {
               style={{
                 textAlign: "center",
                 fontSize: "40px",
-                marginBottom: 100,
+                marginBottom: 50,
                 marginTop: 40
               }}
             >

@@ -6,10 +6,8 @@ import Fab from "@material-ui/core/Fab";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core";
 import api, { setUserCode } from "../../api/axios";
-import logo from "../../images/logo.PNG";
-import logoMillorat from "../../images/logomillorat.PNG";
-import logoTransparent from "../../images/logoTransparent.PNG";
-import loadingGif from "../../images/loading.gif";
+import logo from "../../assets/logo-withoutname.png";
+import loadingGif from "../../assets/loading.gif";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -78,8 +76,6 @@ class Code extends Component {
       >
         <Grid container direction="column" justify="center" alignItems="center">
           <div style={{ textAlign: "center", marginTop: "6%" }}>
-            <img src={logoTransparent} alt={logo} />
-            <img src={logoMillorat} alt={logo} />
             <img src={logo} alt={logo} />
           </div>
           <Grid item xs={12}>
@@ -98,7 +94,7 @@ class Code extends Component {
               <img
                 src={loadingGif}
                 alt="spinner"
-                style={{ width: 300, marginBottom: -12 }}
+                style={{ width: 300, marginTop: -25 }}
               />
             ) : (
               <ColorButton

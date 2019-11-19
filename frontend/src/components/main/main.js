@@ -4,9 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Fab from "@material-ui/core/Fab";
 import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core";
-import logo from "../../images/logo.PNG";
-import logoMillorat from "../../images/logomillorat.PNG";
-import logoTransparent from "../../images/logoTransparent.PNG";
+import logo from "../../assets/logo-withoutname.png";
 
 const ColorButton = withStyles(theme => ({
   root: {
@@ -41,8 +39,6 @@ class Main extends Component {
       <div>
         <Grid container direction="column" justify="center" alignItems="center">
           <div style={{ textAlign: "center", marginTop: "6%" }}>
-            <img src={logoTransparent} alt={logo} />
-            <img src={logoMillorat} alt={logo} />
             <img src={logo} alt={logo} />
             <h1
               style={{

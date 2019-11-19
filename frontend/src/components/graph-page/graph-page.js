@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Sigma } from "react-sigma";
 import SigmaLoader from "./Loader";
 import NodeShapes from "./NodeShapes";
-import loadingGif from "../../images/loading.gif";
+import loadingGraphGif from "../../assets/loading-graph.gif";
 
 import api from "../../api/axios";
 
@@ -38,7 +38,7 @@ class Graph extends Component {
         maxWidth: window.screen.width,
         height: window.screen.height
       },
-      loading: true
+      loading: false
     };
   }
 
@@ -72,9 +72,9 @@ class Graph extends Component {
         </h1>
         {this.state.loading ? (
           <img
-            src={loadingGif}
+            src={loadingGraphGif}
             alt="spinner"
-            style={{ width: 1000, textAlign: 'center', marginLeft: 250 }}
+            style={{ width: 500, marginLeft: '32%'}}
           />
         ) : (
           <Sigma

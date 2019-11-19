@@ -69,8 +69,6 @@ class Home extends Component {
     let studentsArr = this.state.students.split(",");
 
     console.log(studentsArr);
-
-
     api
       .post("/newGroup", {
         name: this.state.groupname,
@@ -98,6 +96,7 @@ class Home extends Component {
           console.log(error.response);
         }
       });
+
     let arr = [];
     arr.push(
       <ListItem button>
@@ -166,14 +165,14 @@ class Home extends Component {
         </Dialog>
 
         <h1 style={{ textAlign: "center" }}> Groups lists for {getUsername()} </h1>
-        {/*<ColorButton
+        <ColorButton
           variant="extended"
           onClick={() => {
             this.handleClickOpen();
           }}
         >
           <AddIcon /> Create new group
-        </ColorButton>*/}
+        </ColorButton>
         <List
           component="nav"
           className={this.props.classes.root}

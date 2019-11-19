@@ -5,13 +5,14 @@ import { withStyles } from "@material-ui/core";
 import Slider from "@material-ui/core/Slider";
 import Grid from "@material-ui/core/Grid";
 import Fab from "@material-ui/core/Fab";
-import smile from "../../images/smile.png";
-import sad from "../../images/sad.png";
-import sliderGif from "../../images/slider.gif";
-import thanksGif from "../../images/thanks.gif";
+import smile from "../../assets/smile.png";
+import sad from "../../assets/sad.png";
+import sliderGif from "../../assets/slider.gif";
+import thanksGif from "../../assets/thanks.gif";
 import NavigateNextRoundedIcon from "@material-ui/icons/NavigateNextRounded";
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 import api, { getUserCode } from "../../api/axios";
+import loadingGif from "../../assets/loading.gif";
 
 const useStyle = makeStyles(theme => ({}));
 
@@ -83,7 +84,8 @@ class Feelings extends Component {
       response4: 0,
       question5: false,
       response5: 0,
-      end: false
+      end: false,
+      loading: false
     };
   }
 
@@ -169,17 +171,19 @@ class Feelings extends Component {
     };
 
     console.log(json);
-
+    this.setState({ loading: true });
     api
       .post("/updateNode?student=" + getUserCode(), json)
       .then(resp => {
         console.log(resp);
         this.props.history.push("/");
+        this.setState({ loading: false });
       })
       .catch(error => {
         if (error.response) {
           console.log(error.response);
         }
+        this.setState({ loading: false });
       });
   };
 
@@ -287,7 +291,7 @@ class Feelings extends Component {
               justify="space-around"
               alignItems="center"
             >
-              <img src={sad} alt="sad" />
+              <img src={smile} alt="smile" />
               <SliderStyled
                 defaultValue={0}
                 onChangeCommitted={(e, value) => {
@@ -299,7 +303,7 @@ class Feelings extends Component {
                 min={0}
                 max={4}
               />
-              <img src={smile} alt="smile" />
+              <img src={sad} alt="sad" />
             </Grid>
             <div style={{ textAlign: "center" }}>
               <ColorButton
@@ -504,23 +508,31 @@ class Feelings extends Component {
                 textAlign: "center",
                 fontSize: "40px",
                 marginBottom: 30,
-                marginTop: 20
+                marginTop: 80
               }}
             >
               YEY! YOU HAVE FINISHED THE TEST!!
             </h1>
             <div style={{ textAlign: "center" }}>
-              <img src={thanksGif} alt="gif" style={{ textAlign: "center" }} />
+              <img src={thanksGif} alt="gif" style={{ textAlign: "center", width: 350 }} />
             </div>
-            <div style={{ textAlign: "center", marginTop: "25px" }}>
-              <ColorButtonEnd
-                variant="extended"
-                onClick={() => {
-                  this.submitFeelingAnswers();
-                }}
-              >
-                SUBMIT YOUR ANSWERS!!
-              </ColorButtonEnd>
+            <div style={{ textAlign: "center", marginTop: "40px" }}>
+              {this.state.loading ? (
+                <img
+                  src={loadingGif}
+                  alt="spinner"
+                  style={{ width: 400, marginTop: -50 }}
+                />
+              ) : (
+                <ColorButtonEnd
+                  variant="extended"
+                  onClick={() => {
+                    this.submitFeelingAnswers();
+                  }}
+                >
+                  SUBMIT YOUR ANSWERS!!
+                </ColorButtonEnd>
+              )}
             </div>
           </div>
         ) : null}

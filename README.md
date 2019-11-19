@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-  <img alt="Logo" src="images/logo.png" width="50%"/>
+  <img alt="Logo" src="assets/logo.png" width="50%"/>
 </p>
 <br>
 
@@ -51,7 +51,7 @@ In the next vesions of ClassControl we think that the questions can be personali
 First of all, when you open the aplication you need to choose your profile (student or teacher)
 <br>
 <p align="center">
-  <img alt="Logo" src="images/start-page.PNG" width="80%"/>
+  <img alt="Logo" src="assets/start-page.PNG" width="80%"/>
 </p>
 <br>
 
@@ -60,14 +60,14 @@ First of all, when you open the aplication you need to choose your profile (stud
 1. **Login page**: The teacher needs to enter a username and a password to login the application, and if it doesn't have account, register.
     <br>
     <p align="center">
-    <img alt="Logo" src="images/teacher-login.PNG" width="80%"/>
+    <img alt="Logo" src="assets/teacher-login.PNG" width="80%"/>
     </p>
     <br>
 
 2. **Groups Page**: The teacher can see a list with all their groups, and also add groups on the list on it by entering a name and a list of students separated by comas. When a group is clicked, it goes to the dependency graph page.
     <br>
     <p align="center">
-    <img alt="Logo" src="images/groups-page.PNG" width="80%"/>
+    <img alt="Logo" src="assets/groups-page.PNG" width="80%"/>
     </p>
     <br>
 
@@ -78,7 +78,7 @@ First of all, when you open the aplication you need to choose your profile (stud
 1. **Login page**: The student needs to enteer their complete name to start answering the questions.
     <br>
     <p align="center">
-    <img alt="Logo" src="images/student-login.PNG" width="80%"/>
+    <img alt="Logo" src="assets/student-login.PNG" width="80%"/>
     </p>
     <br>
 
@@ -86,21 +86,21 @@ First of all, when you open the aplication you need to choose your profile (stud
     1. **Type 1 - Selection of multiple classmates**: The students can choose anyone in the classrom.
         <br>
         <p align="center">
-        <img alt="Logo" src="images/questions-type1.PNG" width="80%"/>
+        <img alt="Logo" src="assets/questions-type1.PNG" width="80%"/>
         </p>
         <br>
 
     2. **Type 2 - Selection of one classmate**: The student have to choose betwen 3 or 4 classmates (depending on the previous answers).
         <br>
         <p align="center">
-        <img alt="Logo" src="images/questions-type2.PNG" width="80%"/>
+        <img alt="Logo" src="assets/questions-type2.PNG" width="80%"/>
         </p>
         <br>
 
     3. **Type 3 - Rating**: The student have to rate selecting a number between 0 and 4.
         <br>
         <p align="center">
-        <img alt="Logo" src="images/questions-type3.PNG" width="80%"/>
+        <img alt="Logo" src="assets/questions-type3.PNG" width="80%"/>
         </p>
         <br>
 
